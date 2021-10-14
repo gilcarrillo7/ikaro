@@ -1,4 +1,5 @@
 import React from "react"
+
 import Boton from "../components/Boton"
 
 const SectionB = () => {
@@ -40,7 +41,7 @@ const SectionB = () => {
         Comienza a utilizar energía solar y contribuye a cuidar el planeta.
       </p>
       <div className="text-center mt-6 mb-4">
-        <Boton>Contáctanos</Boton>
+        <Boton contact={true}>Contáctanos</Boton>
       </div>
     </>
   )

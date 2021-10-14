@@ -32,9 +32,7 @@ const Conocenos = () => {
             </p>
 
             <div className="mt-10 mb-10">
-              <Boton>
-                <Link to="/contact">Contáctanos</Link>
-              </Boton>
+              <Boton contact={true}>Contáctanos</Boton>
             </div>
           </div>
         </div>

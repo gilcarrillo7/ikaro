@@ -5,6 +5,8 @@ module.exports = {
     colors: {
       white: "#FFFFFF",
       pinkbrand: "#eb1a8c",
+      black: "#000000",
+      blue: "#2C36A9",
     },
     container: {
       padding: {

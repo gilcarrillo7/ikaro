@@ -48,7 +48,7 @@ const SectionD = () => {
         </p>
       </div>
       <div className="text-center mt-6 mb-4">
-        <Boton>Contáctanos</Boton>
+        <Boton contact={true}>Contáctanos</Boton>
       </div>
     </>
   )

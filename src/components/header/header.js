@@ -2,7 +2,6 @@ import React, { useState, useContext } from "react"
 import PropTypes from "prop-types"
 import classNames from "classnames"
 import { Link } from "gatsby"
-import { AnchorLink } from "gatsby-plugin-anchor-links"
 
 import { AppContext } from "../../context/AppContext"
 
@@ -10,9 +9,17 @@ import "./header.scss"
 
 import Logo from "../../images/Logo.svg"
 import Background from "../back/Background"
+import Menu from "../menu/Menu"
+import Contact from "../contact/Contact"
 
 const Header = ({ siteTitle }) => {
-  const { menuOpen, setMenuOpen } = useContext(AppContext)
+  const { menuOpen, setMenuOpen, contactOpen, setContactOpen } =
+    useContext(AppContext)
+
+  const closeBackground = () => {
+    if (contactOpen) setContactOpen(false)
+    else setMenuOpen(!menuOpen)
+  }
 
   return (
     <header className="fixed w-full">
@@ -23,51 +30,15 @@ const Header = ({ siteTitle }) => {
           </Link>
         </div>
         <button
-          onClick={() => setMenuOpen(!menuOpen)}
-          className={classNames({ open: menuOpen }, "menu")}
+          onClick={() => closeBackground()}
+          className={classNames({ open: menuOpen || contactOpen }, "menu")}
         >
           <div className="icon-left"></div>
           <div className="icon-right"></div>
         </button>
-        <Background show={menuOpen}>
-          <ul className="flex flex-col h-screen ul-menu absolute">
-            <li>
-              <AnchorLink
-                to="/#section1"
-                onAnchorLinkClick={() => setMenuOpen(false)}
-              >
-                Inicio
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                to="/#section2"
-                onAnchorLinkClick={() => setMenuOpen(false)}
-              >
-                Servicios
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                to="/#section3"
-                onAnchorLinkClick={() => setMenuOpen(false)}
-              >
-                Personal
-              </AnchorLink>
-            </li>
-            <li>
-              <AnchorLink
-                to="/#section4"
-                onAnchorLinkClick={() => setMenuOpen(false)}
-              >
-                Proyectos
-              </AnchorLink>
-            </li>
-            <li>
-              <a href="#">Contacto</a>
-            </li>
-          </ul>
-          <div className="circle fixed"></div>
+        <Background show={menuOpen || contactOpen}>
+          {menuOpen && <Menu />}
+          {contactOpen && <Contact />}
         </Background>
       </nav>
     </header>

@@ -1,0 +1,6 @@
+[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: #A0A0A0;
+  /* For Firefox */
+}
