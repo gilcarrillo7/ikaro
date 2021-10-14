@@ -1,0 +1,153 @@
+$white: #fff;
+$black: #000;
+
+@mixin icon($height, $width) {
+  transition-duration: 0.5s;
+  transition-delay: 0.75s;
+  position: absolute;
+  height: $height;
+  width: $width;
+  top: 21px;
+  background-color: $white;
+}
+
+@mixin icon-before($height, $width, $top) {
+  transition-duration: 0.5s;
+  transition-delay: 0.75s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $white;
+  content: "";
+  top: $top;
+}
+
+@mixin icon-after($height, $width, $top) {
+  transition-duration: 0.5s;
+  transition-delay: 0.75s;
+  position: absolute;
+  width: $width;
+  height: $height;
+  background-color: $white;
+  content: "";
+  top: $top;
+}
+
+.menu {
+  position: relative;
+  width: 46px;
+  height: 46px;
+  transition-duration: 0.5s;
+  transition-delay: 0.75s;
+  border-radius: 100%;
+  border-width: 0;
+  background-color: transparent;
+  z-index: 1;
+
+  &:hover,
+  &:focus {
+    cursor: pointer;
+    outline: none;
+  }
+
+  .icon-left {
+    @include icon(3px, 18px);
+    left: 5px;
+
+    &:before {
+      @include icon-before(3px, 18px, -13px);
+      left: 0;
+    }
+
+    &:after {
+      @include icon-after(3px, 18px, 13px);
+      left: 0;
+    }
+
+    &:hover {
+      cursor: pointer;
+    }
+  }
+
+  .icon-right {
+    @include icon(3px, 18px);
+    right: 5px;
+
+    &:before {
+      @include icon-before(3px, 18px, -13px);
+      right: 0;
+    }
+
+    &:after {
+      @include icon-after(3px, 18px, 13px);
+      right: 0;
+    }
+  }
+
+  &.open {
+    .icon-left {
+      transition-duration: 0.5s;
+      transition-delay: 0.75s;
+      background: transparent;
+
+      &:before {
+        background-color: $black;
+        transform: rotateZ(45deg) scale(1.1) translate(7px, 3px);
+      }
+
+      &:after {
+        background-color: $black;
+        transform: rotateZ(-45deg) scale(1.1) translate(7px, -3px);
+      }
+    }
+
+    .icon-right {
+      transition-duration: 0.5s;
+      transition-delay: 0.75s;
+      background: transparent;
+
+      &:before {
+        background-color: $black;
+        transform: rotateZ(-45deg) scale(1.1) translate(-7px, 3px);
+      }
+
+      &:after {
+        background-color: $black;
+        transform: rotateZ(45deg) scale(1.1) translate(-7px, -3px);
+      }
+    }
+  }
+
+  @media screen and (max-width: 767px) {
+  }
+}
+.ul-menu {
+  z-index: 1;
+  justify-content: center;
+  li {
+    margin: 0.5rem 0;
+    a {
+      font-family: "Roboto";
+      font-weight: 300;
+      font-size: 32px;
+    }
+  }
+}
+.show .circle{
+  opacity: 1;
+  transition-duration: 1s;
+  transition-delay: 1s;
+  visibility: visible;
+}
+.circle {
+  z-index: 0;
+  width: 25rem;
+  height: 25rem;
+  border-radius: 50%;
+  background-color: #eb1a8c;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  visibility: hidden;
+}

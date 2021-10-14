@@ -1,0 +1,15 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import "variables";
+
+body {
+  background-color: $maincolor;
+  background-image: url("../images/patron.png");
+  background-repeat: no-repeat;
+  background-position: 25% 100vh;
+  font-family: "Roboto";
+}
+p.header {
+}
