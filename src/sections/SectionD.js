@@ -43,12 +43,19 @@ const SectionD = () => {
         </div>
       </div>
       <div className="flex justify-center">
-        <p className="inline-flex text-left font-light text-2xl md:text-3xl">
+        <p
+          className="inline-flex text-left font-light text-2xl md:text-3xl"
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+        >
           Utilizar energía solar contribuye a cuidar el planeta.
         </p>
       </div>
       <div className="text-center mt-6 mb-4">
-        <Boton contact={true}>Contáctanos</Boton>
+        <Boton target="/contacto" direction="left">
+          Contáctanos
+        </Boton>
       </div>
     </>
   )

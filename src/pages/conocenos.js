@@ -1,6 +1,5 @@
 import React from "react"
 import Layout from "../components/layout"
-import { Link } from "gatsby"
 
 import Boton from "../components/Boton"
 import Section from "../components/section/Section"
@@ -12,7 +11,12 @@ const Conocenos = () => {
         <div className="flex justify-center"></div>
         <div className="md:grid md:grid-cols-5 md:gap-8 mt-10 sm:mt-20">
           <div className="text-center col-span-3">
-            <p className="text-left md:mt-12 font-light text-3xl sm:text-3xl md:text-4xl">
+            <p
+              className="text-left md:mt-12 font-light text-3xl sm:text-3xl md:text-4xl"
+              data-sal="slide-up"
+              data-sal-delay="300"
+              data-sal-duration="1000"
+            >
               Entre 2030 y 2050 la energía solar se volverá la fuente
               predominante de generación de energía.
             </p>
@@ -32,7 +36,9 @@ const Conocenos = () => {
             </p>
 
             <div className="mt-10 mb-10">
-              <Boton contact={true}>Contáctanos</Boton>
+              <Boton target="/contacto" direction="left">
+                Contáctanos
+              </Boton>
             </div>
           </div>
         </div>

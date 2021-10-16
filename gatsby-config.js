@@ -44,5 +44,7 @@ module.exports = {
       },
     },
     `gatsby-plugin-anchor-links`,
+    `gatsby-plugin-transition-link`,
+    `gatsby-plugin-scroll-reveal`,
   ],
 }

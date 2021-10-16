@@ -1,24 +1,18 @@
-import React, { useContext } from "react"
-import { navigate } from "gatsby"
-
-import { AppContext } from "../context/AppContext"
+import React from "react"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 const Boton = props => {
-  const { target, contact } = props
-  const { setContactOpen } = useContext(AppContext)
-
-  const clickFunction = () => {
-    if (contact) setContactOpen(true)
-    else navigate(target)
-  }
+  const { target, direction } = props
 
   return (
-    <button
+    <AniLink
       className="text-white text-xl rounded-full bg-pinkbrand py-2 px-8"
-      onClick={clickFunction}
+      swipe
+      direction={direction}
+      to={target}
     >
       {props.children}
-    </button>
+    </AniLink>
   )
 }
 

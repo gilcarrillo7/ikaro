@@ -5,13 +5,8 @@ const { Provider } = AppContext
 
 const AppProvider = props => {
   const [menuOpen, setMenuOpen] = useState(false)
-  const [contactOpen, setContactOpen] = useState(false)
 
-  return (
-    <Provider value={{ menuOpen, setMenuOpen, contactOpen, setContactOpen }}>
-      {props.children}
-    </Provider>
-  )
+  return <Provider value={{ menuOpen, setMenuOpen }}>{props.children}</Provider>
 }
 
 export { AppProvider, AppContext }

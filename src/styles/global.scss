@@ -11,5 +11,8 @@ body {
   background-position: 25% 100vh;
   font-family: "Roboto";
 }
-p.header {
+[contenteditable="true"]:empty:before {
+  content: attr(placeholder);
+  display: block;
+  color: #a0a0a0;
 }

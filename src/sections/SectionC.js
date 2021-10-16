@@ -1,5 +1,4 @@
 import React from "react"
-import { Link } from "gatsby"
 
 import Boton from "../components/Boton"
 
@@ -7,7 +6,12 @@ const SectionC = () => {
   return (
     <>
       <div className="flex justify-center">
-        <p className="inline-flex text-left font-light text-3xl sm:text-4xl md:text-5xl">
+        <p
+          className="inline-flex text-left font-light text-3xl sm:text-4xl md:text-5xl"
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+        >
           El mundo necesita de manera urgente
           <br className="hidden lg:block" /> que las actividades humanas sean{" "}
           <br className="hidden lg:block" />
@@ -29,7 +33,9 @@ const SectionC = () => {
         </div>
         <div className="flex justify-center items-center">
           <div className="mt-10 mb-10">
-            <Boton target="/conocenos">Conócenos</Boton>
+            <Boton target="/conocenos" direction="left">
+              Conócenos
+            </Boton>
           </div>
         </div>
       </div>

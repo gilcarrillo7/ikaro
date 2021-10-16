@@ -1,24 +1,34 @@
 import React, { useRef } from "react"
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
-import Boton from "../Boton"
+import Section from "../components/section/Section"
 
-import Section from "../section/Section"
-
-import "./contact.scss"
-
-const Contact = () => {
+const Contacto = () => {
   const comment = useRef(null)
   const ContactSchema = Yup.object().shape({
     name: Yup.string().required("Ingresa tu nombre"),
     email: Yup.string().email("Email incorrecto").required("Ingresa tu email"),
   })
-
   return (
-    <Section>
+    <Section bg="white">
+      <AniLink
+        to="/"
+        swipe
+        direction="right"
+        className="inline-flex absolute top-2 right-2 sm:top-6 sm:right-6"
+      >
+        <div className="menu open">
+          <div className="icon-left"></div>
+          <div className="icon-right"></div>
+        </div>
+      </AniLink>
       <p
         className="text-3xl sm:text-4xl md:text-5xl text-blue"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-duration="1000"
       >
         Cotiza tu sistema solar y comienza <br className="hidden lg:block" />a
         contribuir con la naturaleza.
@@ -88,17 +98,22 @@ const Contact = () => {
                   ></span>
                 </div>
                 {/*
-            <textarea
-              className="appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none"
-              type="mail"
-              placeholder="Comentarios"
-              aria-label="Comentarios"
-              name="comment"
-            ></textarea>*/}
+              <textarea
+                className="appearance-none bg-transparent border-none w-full mr-3 py-1 px-2 leading-tight focus:outline-none"
+                type="mail"
+                placeholder="Comentarios"
+                aria-label="Comentarios"
+                name="comment"
+              ></textarea>*/}
               </div>
             </div>
             <div className="mt-8">
-              <Boton type="submit">Enviar</Boton>
+              <button
+                type="submit"
+                className="text-white text-xl rounded-full bg-pinkbrand py-2 px-8"
+              >
+                Enviar
+              </button>
             </div>
           </Form>
         )}
@@ -107,4 +122,4 @@ const Contact = () => {
   )
 }
 
-export default Contact
+export default Contacto

@@ -1,10 +1,11 @@
 import React, { useContext } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
+import AniLink from "gatsby-plugin-transition-link/AniLink"
 
 import { AppContext } from "../../context/AppContext"
 
 const Menu = () => {
-  const { setMenuOpen, setContactOpen } = useContext(AppContext)
+  const { setMenuOpen } = useContext(AppContext)
 
   return (
     <>
@@ -42,18 +43,14 @@ const Menu = () => {
           </AnchorLink>
         </li>
         <li>
-          <a
-            href="#"
-            onClick={() => {
-              setMenuOpen(false)
-              setContactOpen(true)
-            }}
-          >
+          <AniLink swipe direction="right" to="/contacto">
             Contacto
-          </a>
+          </AniLink>
         </li>
       </ul>
-      <div className="circle fixed"></div>
+      <div
+        className="circle fixed"
+      ></div>
     </>
   )
 }

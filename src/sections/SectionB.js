@@ -6,7 +6,12 @@ const SectionB = () => {
   return (
     <>
       <div className="flex justify-center">
-        <p className="inline-flex text-left font-light text-3xl sm:text-4xl md:text-5xl">
+        <p
+          className="inline-flex text-left font-light text-3xl sm:text-4xl md:text-5xl"
+          data-sal="slide-up"
+          data-sal-delay="300"
+          data-sal-duration="1000"
+        >
           Las energías limpias son un medio
           <br className="hidden lg:block" /> para contribuir con la naturaleza.
         </p>
@@ -37,11 +42,18 @@ const SectionB = () => {
           </p>
         </div>
       </div>
-      <p className="font-bold text-2xl text-center">
+      <p
+        className="font-bold text-2xl text-center"
+        data-sal="slide-up"
+        data-sal-delay="300"
+        data-sal-duration="1000"
+      >
         Comienza a utilizar energía solar y contribuye a cuidar el planeta.
       </p>
       <div className="text-center mt-6 mb-4">
-        <Boton contact={true}>Contáctanos</Boton>
+        <Boton target="/contacto" direction="left">
+          Contáctanos
+        </Boton>
       </div>
     </>
   )
