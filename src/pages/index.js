@@ -1,9 +1,11 @@
-import React, { useEffect, useRef } from "react"
+import React, { useEffect, useRef, useContext } from "react"
 import { Element, scroller } from "react-scroll"
 
 import Layout from "../components/layout"
 import Section from "../components/section/Section"
 //import Seo from "../components/seo"
+
+import { AppContext } from "../context/AppContext"
 
 import SectionA from "../sections/SectionA"
 import SectionB from "../sections/SectionB"
@@ -11,6 +13,7 @@ import SectionC from "../sections/SectionC"
 import SectionD from "../sections/SectionD"
 
 const IndexPage = () => {
+  const { setCurrSection } = useContext(AppContext)
   const sections = useRef(new Array(4))
 
   let removed = false
@@ -35,10 +38,11 @@ const IndexPage = () => {
     }
     handle = setTimeout(() => {
       const indx = getIndxSection(window.scrollY) + 1
+      setCurrSection(indx)
       if (window.innerWidth >= 640)
         scroller.scrollTo(`section${indx}`, {
-          duration: 500,
-          delay: 100,
+          duration: 200,
+          delay: 20,
           smooth: true,
         })
     }, 200)

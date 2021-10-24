@@ -6,7 +6,11 @@ const SectionD = () => {
     <>
       <div className="sm:grid sm:grid-cols-3 sm:gap-12 mt-8 mb-8 sm:mt-16 sm:mb-16 md:mt-20 md:mb-20 lg:mt-24 lg:mb-24">
         <div className="text-center m-4 sm:m-0">
-          <div className="rounded-full w-36 h-36 bg-pinkbrand m-auto"></div>
+          <div
+            className="rounded-full w-36 h-36 bg-pinkbrand m-auto"
+            data-sal="zoom-out"
+            data-sal-duration="1000"
+          ></div>
           <p className="font-bold text-xl mt-4">Residencial</p>
           <p className="text-base font-thin mt-4 ">
             Casa de campo
@@ -16,7 +20,11 @@ const SectionD = () => {
           </p>
         </div>
         <div className="text-center m-4 sm:m-0">
-          <div className="rounded-full w-36 h-36 bg-pinkbrand m-auto"></div>
+          <div
+            className="rounded-full w-36 h-36 bg-pinkbrand m-auto"
+            data-sal="zoom-out"
+            data-sal-duration="1000"
+          ></div>
           <p className="font-bold text-xl mt-4">Comercial</p>
           <p className="text-base font-thin mt-4">
             Oficinas
@@ -29,7 +37,11 @@ const SectionD = () => {
           </p>
         </div>
         <div className="text-center m-4 sm:m-0">
-          <div className="rounded-full w-36 h-36 bg-pinkbrand m-auto"></div>
+          <div
+            className="rounded-full w-36 h-36 bg-pinkbrand m-auto"
+            data-sal="zoom-out"
+            data-sal-duration="1000"
+          ></div>
           <p className="font-bold text-xl mt-4">Industrial</p>
           <p className="text-base font-thin mt-4">
             Supermercado
@@ -53,9 +65,7 @@ const SectionD = () => {
         </p>
       </div>
       <div className="text-center mt-6 mb-4">
-        <Boton target="/contacto" direction="left">
-          Contáctanos
-        </Boton>
+        <Boton target="contact">Contáctanos</Boton>
       </div>
     </>
   )

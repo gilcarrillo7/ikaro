@@ -1,7 +1,7 @@
 import React, { useRef } from "react"
 import { Formik, Form, Field } from "formik"
 import * as Yup from "yup"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import { Link } from "gatsby"
 
 import Section from "../components/section/Section"
 
@@ -13,9 +13,8 @@ const Contacto = () => {
   })
   return (
     <Section bg="white">
-      <AniLink
+      <Link
         to="/"
-        swipe
         direction="right"
         className="inline-flex absolute top-2 right-2 sm:top-6 sm:right-6"
       >
@@ -23,7 +22,7 @@ const Contacto = () => {
           <div className="icon-left"></div>
           <div className="icon-right"></div>
         </div>
-      </AniLink>
+      </Link>
       <p
         className="text-3xl sm:text-4xl md:text-5xl text-blue"
         data-sal="slide-up"

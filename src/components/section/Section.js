@@ -5,7 +5,7 @@ const Section = props => {
   return (
     <section>
       <div
-        className={`min-h-screen text-white flex items-center justify-center ${
+        className={`min-h-screen text-white flex items-center justify-center relative ${
           bg === "white" ? "bg-white" : ""
         }`}
       >

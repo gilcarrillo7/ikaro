@@ -51,9 +51,7 @@ const SectionB = () => {
         Comienza a utilizar energía solar y contribuye a cuidar el planeta.
       </p>
       <div className="text-center mt-6 mb-4">
-        <Boton target="/contacto" direction="left">
-          Contáctanos
-        </Boton>
+        <Boton target="contact">Contáctanos</Boton>
       </div>
     </>
   )

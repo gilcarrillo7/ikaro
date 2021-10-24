@@ -122,27 +122,26 @@ $black: #000;
   }
 }
 .ul-menu {
-  z-index: 1;
   justify-content: center;
+  opacity: 0;
+  visibility: hidden;
   li {
     margin: 0.5rem 0;
-    a {
+    a,
+    button {
       font-family: "Roboto";
       font-weight: 300;
       font-size: 32px;
     }
   }
 }
-.show .circle{
+.ul-menu.open {
   opacity: 1;
-  transition-duration: 1s;
+  transition-duration: 0.5s;
   transition-delay: 1s;
   visibility: visible;
 }
 .circle {
-  z-index: 0;
-  width: 25rem;
-  height: 25rem;
   border-radius: 50%;
   background-color: #eb1a8c;
   top: 50%;
@@ -150,4 +149,10 @@ $black: #000;
   transform: translate(-50%, -50%);
   opacity: 0;
   visibility: hidden;
+}
+.open.circle {
+  opacity: 1;
+  transition-duration: 0.5s;
+  transition-delay: 1s;
+  visibility: visible;
 }

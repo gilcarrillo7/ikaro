@@ -36,9 +36,7 @@ const Conocenos = () => {
             </p>
 
             <div className="mt-10 mb-10">
-              <Boton target="/contacto" direction="left">
-                Contáctanos
-              </Boton>
+              <Boton target="contact">Contáctanos</Boton>
             </div>
           </div>
         </div>

@@ -7,7 +7,6 @@
 
 import React from "react"
 import PropTypes from "prop-types"
-import { AppProvider } from "../context/AppContext"
 import { useStaticQuery, graphql } from "gatsby"
 
 import Header from "./header/header"
@@ -24,12 +23,12 @@ const Layout = ({ children }) => {
   `)
 
   return (
-    <AppProvider>
+    <>
       <Header siteTitle={data.site.siteMetadata?.title || `Title`} />
       <div className="text-white">
         <main>{children}</main>
       </div>
-    </AppProvider>
+    </>
   )
 }
 

@@ -1,15 +1,21 @@
 import React, { useContext } from "react"
 import { AnchorLink } from "gatsby-plugin-anchor-links"
-import AniLink from "gatsby-plugin-transition-link/AniLink"
+import classNames from "classnames"
 
 import { AppContext } from "../../context/AppContext"
 
 const Menu = () => {
-  const { setMenuOpen } = useContext(AppContext)
+  const { menuOpen, setMenuOpen, currSection, setContactOpen } =
+    useContext(AppContext)
 
   return (
     <>
-      <ul className="flex flex-col h-screen ul-menu absolute">
+      <ul
+        className={classNames(
+          { open: menuOpen },
+          "ul-menu flex flex-col h-screen fixed z-50 ml-4 sm:ml-8 md:ml-8 lg:ml-24"
+        )}
+      >
         <li>
           <AnchorLink
             to="/#section1"
@@ -43,14 +49,19 @@ const Menu = () => {
           </AnchorLink>
         </li>
         <li>
-          <AniLink swipe direction="right" to="/contacto">
+          <button onClick={() => setContactOpen(true)}>
             Contacto
-          </AniLink>
+          </button>
         </li>
       </ul>
-      <div
-        className="circle fixed"
-      ></div>
+      {currSection > 1 && (
+        <div
+          className={classNames(
+            { open: menuOpen },
+            "circle fixed z-20 h-80 w-80 sm:h-96 sm:w-96"
+          )}
+        ></div>
+      )}
     </>
   )
 }
