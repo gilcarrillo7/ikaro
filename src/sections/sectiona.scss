@@ -67,6 +67,7 @@ p {
     left: calc(100%);
     bottom: calc(100% - 350px);
     opacity: 0;
+    display: none;
   }
 }
 
@@ -94,5 +95,6 @@ p {
     left: calc(50% - 627px);
     bottom: calc(50% - 190px);
     opacity: 0;
+    display: none;
   }
 }
