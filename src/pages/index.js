@@ -65,7 +65,7 @@ const IndexPage = () => {
 
   return (
     <Layout>
-      <div ref={el => (sections.current[0] = el)}>
+      <div ref={el => (sections.current[0] = el)} className="overflow-hidden">
         <Element id="section1">
           <Section>
             <SectionA />
