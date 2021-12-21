@@ -20,9 +20,9 @@ const SectionB = () => {
         <div className="text-center m-4 sm:m-0">
           <p className="font-bold text-xl">Transforma</p>
           <p className="text-base font-thin mt-4 text-left">
-            El efecto fotovoltaico es por el cual la radiación solar se
-            convierte en energía eléctrica, para poder ser aprovechada en
-            nuestros hogares, comercio o industria.
+            La energía es una fuerza que siempre se transforma y nunca se
+            desvanece. Las células fotovoltaica convierten la luz solar en
+            electricidad.
           </p>
         </div>
         <div className="text-center m-4 sm:m-0">

@@ -21,10 +21,11 @@ const SectionC = () => {
       <div className="sm:grid sm:grid-cols-2 sm:gap-12 mt-10 sm:mt-20">
         <div className="text-center">
           <p className="text-lg font-thin mt-4 text-left">
-            El mundo necesita de manera urgente que las actividades humanas sean
-            descarbonizadas. El consumo de energía es de las actividades más
-            contaminantes para el planeta, el uso de energía limpia y rentable
-            disminuye tu huella de carbono.
+            Somos amantes de la tecnología solar, vimos en los sistemas solares
+            fotovoltaicos la oportunidad de aprovechar nuestros conocimientos
+            para contribuir al cuidado del planeta. Razón que nos motiva a
+            crecer y a convencer a nuestros clientes de que es una tecnología
+            viable, rentable y limpia.
           </p>
           <p className="text-lg font-thin mt-4 text-left">
             Más de 20 años de experiencia, más de 100 sistemas solares

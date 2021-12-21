@@ -88,9 +88,7 @@ const IndexPage = () => {
       </div>
       <div ref={el => (sections.current[3] = el)}>
         <Element id="section4">
-          <Section>
-            <SectionD />
-          </Section>
+          <SectionD />
         </Element>
       </div>
     </Layout>

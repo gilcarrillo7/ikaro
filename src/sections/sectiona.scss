@@ -1,14 +1,98 @@
 @import "../styles/variables";
 
+p {
+  font-size: 22px;
+  font-weight: 300;
+}
 .sun {
   border-radius: 100%;
   background-color: $secondcolor;
   margin: 0 auto;
   top: 50%;
   left: 50%;
-  transform: translate(-50%, -50%) !important;
+  transform: translate(-50%, -50%);
+  opacity: 0;
+  animation-name: sol;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1s;
 }
-p {
-  font-size: 22px;
-  font-weight: 300;
+
+@keyframes sol {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.psun{
+  opacity: 0;
+  animation-name: psol;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 1.5s;
+}
+
+@keyframes psol {
+  from {
+    opacity: 0;
+  }
+  to {
+    opacity: 1;
+  }
+}
+
+.destello1 {
+  position: absolute;
+  transform: rotateZ(180deg) scale(2);
+  left: -418px;
+  bottom: -350px;
+  animation-name: destello1;
+  animation-fill-mode: forwards;
+  animation-duration: 2s;
+}
+
+@keyframes destello1 {
+  0% {
+    left: -418px;
+    bottom: -350px;
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    left: calc(100%);
+    bottom: calc(100% - 350px);
+    opacity: 0;
+  }
+}
+
+.destello2 {
+  position: absolute;
+  transform: rotateZ(180deg) scale(2);
+  left: -836px;
+  bottom: -190px;
+  animation-name: destello2;
+  animation-fill-mode: forwards;
+  animation-duration: 1s;
+  animation-delay: 0.5s;
+}
+
+@keyframes destello2 {
+  0% {
+    left: -836px;
+    bottom: -190px;
+    opacity: 1;
+  }
+  50%{
+    opacity: 1;
+  }
+  100% {
+    left: calc(50% - 627px);
+    bottom: calc(50% - 190px);
+    opacity: 0;
+  }
 }
